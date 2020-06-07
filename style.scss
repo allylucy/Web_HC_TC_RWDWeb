@@ -41,3 +41,34 @@ nav {
     background-position: center;
     background-size: cover;
 }
+
+// 圖片區域
+#picture {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+
+    div {
+        height: 260px;
+        
+        &:nth-child(1) {
+            background: deepskyblue;
+            font-size: 42px;
+            display: grid;
+            align-items: center;
+            text-align: center;
+        }
+
+        &:nth-child(2) {
+            background-image: url(./img/d-beach-1.jpg);
+            background-size: 100%;
+        }
+
+        &:nth-child(3) {
+            background-image: url(./img/d-beach-2.jpg);
+            background-size: 100%;
+        }
+    }
+}

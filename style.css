@@ -38,4 +38,39 @@ nav div a:hover {
   background-position: center;
   background-size: cover;
 }
+
+#picture {
+  width: 1200px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  color: white;
+}
+
+#picture div {
+  height: 260px;
+}
+
+#picture div:nth-child(1) {
+  background: deepskyblue;
+  font-size: 42px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#picture div:nth-child(2) {
+  background-image: url(./img/d-beach-1.jpg);
+  background-size: 100%;
+}
+
+#picture div:nth-child(3) {
+  background-image: url(./img/d-beach-2.jpg);
+  background-size: 100%;
+}
 /*# sourceMappingURL=style.css.map */
