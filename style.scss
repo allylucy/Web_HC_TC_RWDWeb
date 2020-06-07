@@ -1,6 +1,7 @@
 @mixin desktop-box {
     width: 1200px;
     margin: 0 auto;
+    transition: 0.3s;
 }
 
 * {
@@ -27,7 +28,7 @@ nav {
         a {
             color: white;
             text-decoration: none;
-            padding: 0 30px;
+            padding-right: 60px;
             transition: 0.5s;
 
             &:hover {
@@ -83,9 +84,10 @@ nav {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+    grid-gap: 0 50px;
 
     h1 {
+        color: deepskyblue;
         grid-column: 1 / 3;
         padding: 30px 0;
     }
@@ -93,5 +95,30 @@ nav {
     p {
         line-height: 2;
         margin-bottom: 20px;
+    }
+}
+
+// RWD
+// 平板：大於等於 768 並且 小於等於 1199
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    // 平板寬度
+    @mixin  table-box {
+        width: 750px;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+
+    nav {
+        div {
+            @include table-box();
+        }
+    }
+
+    #picture {
+        @include table-box();
+    }
+
+    #content {
+        @include table-box();
     }
 }
