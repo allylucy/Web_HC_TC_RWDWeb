@@ -137,3 +137,45 @@ nav {
         @include table-box();
     }
 }
+
+// 手機：小於等於 767
+@media screen and (max-width: 767px) {
+    @mixin phone-box {
+        width: 100%;
+        transition: 0.3s;
+        padding: 0 15px;
+    }
+
+    nav {
+        div {
+            @include phone-box();
+        }
+    }
+
+    #picture {
+        @include phone-box();
+        grid-template-columns: 1fr;
+
+        div {
+            height: 450px;
+
+            &:nth-child(2) {
+                background-image: url(./img/m-beach-1.png);
+                background-size: cover;
+            }
+            &:nth-child(3) {
+                background-image: url(./img/m-beach-2.png);
+                background-size: cover;
+            }
+        }
+    }
+
+    #content {
+        @include phone-box();
+        grid-template-columns: 1fr;
+
+        h1 {
+            grid-column: 1 / 2;
+        }
+    }
+}
